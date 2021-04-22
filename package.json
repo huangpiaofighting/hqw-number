@@ -18,6 +18,11 @@
         "webpack",
         "number"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/huangpiaofighting/hqw-number"
+    },
+    "homepage": "https://github.com/huangpiaofighting/hqw-number",
     "author": "hqw",
     "license": "MIT",
     "dependencies": {
