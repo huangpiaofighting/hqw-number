@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import Konva from 'konva';
-import { each } from 'lodash';
+// import { each } from 'lodash';
 import styles from './index.less'
 
 class NumberCanvas extends Component {
@@ -53,7 +53,7 @@ class NumberCanvas extends Component {
     for (let i = 0;i < length;i++) {
       numberArr.push(this.props.num.charAt(i))
     }
-    each(numberArr, (item,i)=>{
+    numberArr.forEach((item,i)=>{
       const group = this.createNum(item)
       group.move({
         x: (this.numWidth*i+this.qingxie*10*i),
@@ -61,7 +61,16 @@ class NumberCanvas extends Component {
         y: 0
       })
       this.layer.add(group)
-    });
+    })
+    // each(numberArr, (item,i)=>{
+    //   const group = this.createNum(item)
+    //   group.move({
+    //     x: (this.numWidth*i+this.qingxie*10*i),
+    //     // x: 0,
+    //     y: 0
+    //   })
+    //   this.layer.add(group)
+    // });
   }
 
   createNum(num){
